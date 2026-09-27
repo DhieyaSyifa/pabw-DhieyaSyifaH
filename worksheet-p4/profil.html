@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TODO: Jadwal dan Target Olahraga Saya </title>
+
+     <link rel="stylesheet" href="tokens.css">
+     <link rel="stylesheet" href="base.css">
+     <link rel="stylesheet" href="layout.css">
+     <link rel="stylesheet" href="komponen.css">
+     <link rel="stylesheet" href="tema.css">
+</head>
+<body>
+     <header>
+          <h1>Jadwal dan Target Olahraga</h1>
+          <nav aria-label="Navigasi Utama">
+               <ul>
+                    <li><a href="#bagian-1">Jadwal Olahraga</a></li>
+                    <li><a href="#bagian-2">Jenis Olahraga</a></li>
+                    <li><a href="#bagian-3">Gambar</a></li>
+               </ul>
+          </nav>
+     </header>
+
+     <main>
+          <section id="bagian-1">
+               <h2>Jadwal Olahraga</h2>
+               <table>
+                    <caption>My exercise</caption>
+                    <thead>
+                         <tr>
+                              <th scope="col">Hari</th>
+                              <th scope="col">Jenis olahraga</th>
+                              <th scope="col">Durasi</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                              <th scope="row">selasa</th>
+                              <td>Lari</td>
+                              <td>30 menit</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">Rabu</th>
+                              <td>Push up</td>
+                              <td>2 menit</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">Kamis</th>
+                              <td>Wallsit</td>
+                              <td>10 menit</td>
+                         </tr>
+                    </tbody>
+               </table>
+          </section>
+
+          <section id="bagian-2">
+               <h2>Jenis Olahraga</h2>
+               <form action="/simpan" method="post">
+                    <p>
+                         <label for="Hari">Hari</label>
+                         <input type="text" name="Hari" id="Hari">
+                    </p>
+                    <p>
+                         <label for="Jenis Olahraga">Jenis Olahraga</label>
+                         <input type="text" name="Jenis Olahraga" id="Jenis Olahraga">
+                    </p>
+                    <p>
+                         <label for="Durasi">Durasi</label>
+                         <input type="text" name="Durasi" id="Durasi">
+                    </p>
+                    <button type="submit">Simpan</button>
+               </form>  
+          </section>
+
+          <section id="bagian-3">
+               <h2>Gambar</h2>
+               <figure>
+                    <img src="images.jpg"
+                    alt="macam-macam olahraga"
+                    width="640" height="360" loading="lazy">
+               </figure>
+          </section>
+     </main>
+
+     <footer>
+          <p>Dhieya Syifa Hardiana · 25253150 · 2026</p>
+     </footer>
+</body>
+</html>
