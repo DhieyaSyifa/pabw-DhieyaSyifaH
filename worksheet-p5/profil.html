@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TODO: Jadwal dan Target Olahraga Saya </title>
+
+     <link rel="stylesheet" href="tokens.css">
+     <link rel="stylesheet" href="base.css">
+     <link rel="stylesheet" href="layout.css">
+     <link rel="stylesheet" href="komponen.css">
+     <link rel="stylesheet" href="tema.css">
+</head>
+
+<body>
+     <div class="page">
+          <header>
+          <input type="checkbox" id="tema" class="pengalih-tema">
+          <label for="tema" class="tombol-tema">Tema gelap</label>
+          <div class="header-baris">
+          <h1>Jadwal dan Target Olahraga</h1>
+               <nav class="navbar" aria-label="Navigasi Utama">
+               <ul>
+                    <li><a href="#bagian-1">Jadwal Olahraga</a></li>
+                    <li><a href="#bagian-2">Jenis Olahraga</a></li>
+                    <li><a href="#bagian-3">Gambar</a></li>
+               </ul>
+               </nav>
+          </div>
+          </header>
+
+     <main>
+          <div class="isi">
+               <div class="sisi">
+                    <section id="bagian-1">
+                    <h2>Jadwal Olahraga</h2>
+                    <table>
+                         <caption>My exercise</caption>
+                         <thead>
+                              <tr>
+                                   <th scope="col">Hari</th>
+                                   <th scope="col">Jenis olahraga</th>
+                                   <th scope="col">Durasi</th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr>
+                                   <th scope="row">selasa</th>
+                                   <td>Lari</td>
+                                   <td>30 menit</td>
+                              </tr>
+                              <tr>
+                                   <th scope="row">Rabu</th>
+                                   <td>Push up</td>
+                                   <td>2 menit</td>
+                              </tr>
+                              <tr>
+                                   <th scope="row">Kamis</th>
+                                   <td>Wallsit</td>
+                                   <td>10 menit</td>
+                              </tr>
+                         </tbody>
+                    </table>
+                    </section>
+
+                    <section id="bagian-2">
+                    <h2>Jenis Olahraga</h2>
+                    <form action="/simpan" method="post">
+                         <p>
+                              <label for="Hari">Hari</label>
+                              <input type="text" name="Hari" id="Hari">
+                         </p>
+                         <p>
+                              <label for="Jenis">Jenis</label>
+                              <input type="text" name="Jenis" id="Jenis">
+                         </p>
+                         <p>
+                              <label for="Durasi">Durasi</label>
+                              <input type="text" name="Durasi" id="Durasi">
+                         </p>
+                         <button type="submit">Simpan</button>
+                    </form>  
+                    </section>
+               </div>
+               
+               <div class="utama">
+                    <section id="bagian-3">
+                    <h2>Gambar</h2>
+                    <div class="galeri">
+                         <figure class="kartu">
+                              <img src="voli.jpg"
+                              alt="macam-macam olahraga"
+                              width="360" height="360" loading="lazy">
+                              <figcaption class="kartu__isi">
+                                   <h3 class="kartu__judul">VOLI</h3>
+                                   <p>Bola voli adalah olahraga yang dimainkan oleh dua tim dalam satu lapangan yang dipisahkan oleh sebuah net. Seperti dilansir dari pbvsi.or.id, permainan bola voli diciptakan oleh William G Morgan dan sampai saat ini menjadi salah satu cabang olahraga yang dimainkan masyarakat Indonesia.</p>
+                              </figcaption>
+                         </figure>
+
+                         <figure class="kartu">
+                              <img src="badminton.jpg"
+                              alt="badminton"
+                              width="360" height="360" loading="lazy">
+                              <figcaption class="kartu__isi">
+                                   <h3 class="kartu__judul">BULU TANGKIS</h3>
+                                   <p>Servis bulu tangkis adalah pukulan pembuka yang memulai setiap rally dalam permainan. Tujuan utama servis adalah mengirimkan shuttlecock (kok) ke area lapangan lawan secara legal, sehingga memulai permainan dengan baik.</p>
+                              </figcaption>
+                              
+                         </figure>
+                    </div>
+                    </section>
+               </div>
+          
+
+               
+           </div>
+     </main>
+
+     <footer>
+          <p>Dhieya Syifa Hardiana · 25253150 · 2026</p>
+     </footer>
+     </div>
+</body>
+</html>

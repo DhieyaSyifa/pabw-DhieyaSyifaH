@@ -2,6 +2,18 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
+## Tugas Pertemuan 5 - Layout Modern: Flexbox dan Grid
+### Kerangka Halaman 
+| Bagian Halaman | Peran | Nilai |
+| Baris pertama | Kepala halaman : judul dan menu | auto |
+| Baris kedua | Isi : sidebar dan geleri | 1fr |
+| Baris ketiga | Kaki halaman | auto |
+| Kolom isi | Sidebar tetap, konten lentur | 16rem 1fr |
+## Catatan Penggunaan AI : 
+- Mencari cara untuk menautkan class yang ada di css ke bagian-bagian di html
+- Mencari referensi sumber untuk memahami kode-kode yang ditambahkan di file css
+
+
 ## Tugas Pertemuan 4 - Design Token Halaman Profil
 Berkas gaya : tokens.css, base.css, layout.css, komponen.css, tema.css.
 
