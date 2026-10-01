@@ -2,6 +2,15 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
+## Tugas Pertemuan 6 - Responsif Mobile-First
+## Catatan Penggunaan AI : 
+Masalah : 
+1. Adanya perbedaan nama class/selector yang ada di worksheet 6 (file responsif.css) dengan worksheet-worksheet sebelumnya. Misalnya di file responsif.css ada class .content sedangkan di worksheet-worksheet sebelumnya bernama .isi
+2. Ada kode-kode yang "bertabrakan" sehingga butuh di-override di dalam file responsif.css
+Solusi dari AI : 
+1. Mengganti nama class/selector yang ada di file responsif.css
+2. Di dalam class .isi (file responsif.css) dan media querry bagian desktop ditambah kode beberapa kode yang meng-override kode-kode sebelumnya
+
 ## Tugas Pertemuan 5 - Layout Modern: Flexbox dan Grid
 ### Kerangka Halaman 
 | Bagian Halaman | Peran | Nilai |
