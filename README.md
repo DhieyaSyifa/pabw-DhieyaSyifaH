@@ -2,6 +2,13 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
+##Tugas Pertemuan 8 - Membuat Halaman Profil yang Datanya Bergerak
+##Catatan Penggunaan AI : 
+- Mencari arti galat yang muncul
+- Kenapa galat tersebut bisa muncul
+- Kenapa type="module" bisa berpengaruh terhadap pemanggilan variabel dan fungsi di console
+- Arti galat "Cannot read properties of null"
+
 ## Tugas Pertemuan 6 - Responsif Mobile-First
 ## Catatan Penggunaan AI : 
 Masalah : 
