@@ -7,3 +7,11 @@ const profil = {
 
 const kalimat = `Nama saya ${profil.namaLengkap} dan saya sedang belajar ${profil.keahlianPemrograman.length} bahasa pemrograman.`;
 console.log(kalimat);
+
+function buatPerkenalan ({namaLengkap, peran}) {
+    return `${namaLengkap} -- ${peran}`;
+}
+const formatKeahlian = (daftar) => daftar.join(" . ");
+
+console.log(buatPerkenalan(profil));
+console.log(formatKeahlian(profil.keahlianPemrograman))
