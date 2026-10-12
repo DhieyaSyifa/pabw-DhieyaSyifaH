@@ -2,6 +2,14 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
+##Tugas Pertemuan 9 - Memasang  Data ke Halaman dan Menanggapi Pengguna
+##Catatan Penggunaan AI : 
+- Cara menampilkan pesan galat saat isian form hanya spasi
+- Bagian filter dalam kartu
+- Render gambar untuk mengganti dengan daftarProyek yang ada di app.js
+- Memahami instruksi yang diberikan dalam worksheet
+- Penambahan kode-kode tertentu agar bisa jalan (filter, katalog/gambar, pesan galat)
+
 ##Tugas Pertemuan 8 - Membuat Halaman Profil yang Datanya Bergerak
 ##Catatan Penggunaan AI : 
 - Mencari arti galat yang muncul
