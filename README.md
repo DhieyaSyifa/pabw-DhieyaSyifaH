@@ -2,16 +2,23 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
-##Tugas Pertemuan 9 - Memasang  Data ke Halaman dan Menanggapi Pengguna
-##Catatan Penggunaan AI : 
+## Tugas Pertemuan 10 - Javascript Asinkron : Fetch, Promise, dan JSON
+## Catatan Penggunaan AI : 
+- Memahami materi dan instruksi dari worksheet
+- Mencari solusi dalam pesan error pada console
+- Penyesuaian kode-kode baru dengan kode-kode lama
+- Memahami konsep-konsep kode dan kode fungsi pada file dom.js, app.js, dan api.js
+
+## Tugas Pertemuan 9 - Memasang  Data ke Halaman dan Menanggapi Pengguna
+## Catatan Penggunaan AI : 
 - Cara menampilkan pesan galat saat isian form hanya spasi
 - Bagian filter dalam kartu
 - Render gambar untuk mengganti dengan daftarProyek yang ada di app.js
 - Memahami instruksi yang diberikan dalam worksheet
 - Penambahan kode-kode tertentu agar bisa jalan (filter, katalog/gambar, pesan galat)
 
-##Tugas Pertemuan 8 - Membuat Halaman Profil yang Datanya Bergerak
-##Catatan Penggunaan AI : 
+## Tugas Pertemuan 8 - Membuat Halaman Profil yang Datanya Bergerak
+## Catatan Penggunaan AI : 
 - Mencari arti galat yang muncul
 - Kenapa galat tersebut bisa muncul
 - Kenapa type="module" bisa berpengaruh terhadap pemanggilan variabel dan fungsi di console
