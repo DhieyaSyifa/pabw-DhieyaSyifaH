@@ -1,5 +1,15 @@
 import { ambilProyek } from './api.js';
 
+async function muat() {
+    try {
+        const daftar = await ambilProyek();
+        console.log('Data berhasil dimuat:', daftar);
+    } catch (galat) {
+        console.log('Galat berhasil ditangkap di app.js:', galat.message);
+    }
+}
+muat();
+
 // const profil = {
 //     namaLengkap : "Dhieya Syifa Hardiana",
 //     peran : "Mahasiswa informatika yang belajar front-end",
@@ -63,4 +73,3 @@ import { ambilProyek } from './api.js';
 // window.judulProyek = judulProyek
 // console.table(judulProyek)
 
-ambilProyek().then((daftar) => console.log(daftar));
