@@ -1,12 +1,16 @@
 import { ambilProyek } from './api.js';
 
+const kosongEl = document.querySelector('.galeri.grid');
+const daftarEl = document.querySelector('#pesan-kosong');
+
 async function muat() {
-    try {
-        const daftar = await ambilProyek();
-        console.log('Data berhasil dimuat:', daftar);
-    } catch (galat) {
-        console.log('Galat berhasil ditangkap di app.js:', galat.message);
-    }
+  try {
+    const daftar = await ambilProyek();
+    console.log('Seluruh data:', daftar);
+    console.log('Judul proyek pertama:', daftar[1].judul); // Ganti .judul sesuai kunci kamu
+  } catch (galat) {
+    console.error(galat.message);
+  }
 }
 muat();
 
