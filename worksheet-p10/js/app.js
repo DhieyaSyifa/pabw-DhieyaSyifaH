@@ -1,17 +1,20 @@
 import { ambilProyek } from './api.js';
-
-const kosongEl = document.querySelector('.galeri.grid');
-const daftarEl = document.querySelector('#pesan-kosong');
+import { render, pasangFilter, aturMemuat, tampilkanGalat } from './dom.js';
 
 async function muat() {
+  aturMemuat(true);                        
   try {
-    const daftar = await ambilProyek();
-    console.log('Seluruh data:', daftar);
-    console.log('Judul proyek pertama:', daftar[1].judul); // Ganti .judul sesuai kunci kamu
+    const daftar = await ambilProyek();    
+    pasangFilter(daftar);                  
+    render(daftar);                       
   } catch (galat) {
-    console.error(galat.message);
+    tampilkanGalat('Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.');
+    console.error(galat.message);          
+  } finally {
+    aturMemuat(false);                    
   }
 }
+
 muat();
 
 // const profil = {
