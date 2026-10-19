@@ -2,6 +2,13 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
+## Tugas Pertemuan 11 - Membagi Satu Berkas Menjadi Lima Berkas yang Jelas Tugasnya
+## Catatan Penggunaan AI : 
+- Memahami materi yang ada di worksheet
+- Panduan langkah-langkah dalam menyesuaikan kode yang telah ada sebelum-sebelumnya
+- Memperbaiki galat yang muncul di console
+- Perbaikan kode untuk filter yang tidak bisa berfungsi
+
 ## Tugas Pertemuan 10 - Javascript Asinkron : Fetch, Promise, dan JSON
 ## Catatan Penggunaan AI : 
 - Memahami materi dan instruksi dari worksheet

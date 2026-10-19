@@ -29,7 +29,6 @@ export function tandaiTombolAktif(kategoriAktif) {
   });
 }
 
-// js/dom.js
 export function render(state) {
   if (!wadah) return;
   wadah.textContent = ""; 
