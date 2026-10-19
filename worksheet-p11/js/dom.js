@@ -1,35 +1,58 @@
-import {profil, buatPerkenalan, formatKeahlian, saring} from './data.js';
+import { saring } from './data.js';
 
 const wadah = document.querySelector(".galeri.grid");
 const pesanKosong = document.querySelector("#pesan-kosong");
 const muatEl = document.querySelector("#muat");
-const barisFilter = document.querySelector("#filter");
 
 const formOlahraga = document.querySelector("form");
 const inputHari = document.querySelector("#Hari");
 const inputJenis = document.querySelector("#Jenis");
 const inputDurasi = document.querySelector("#Durasi");
 
-function buatKartu(proyek) {
+export function buatKartu(proyek, favorit = []) {
   const li = document.createElement("li");
   li.className = "kartu";
-  li.textContent = `${proyek.judul} (${proyek.tahun})`;
+  
+  const judul = document.createElement("h3");
+  judul.textContent = proyek.judul || proyek.nama;
+  li.append(judul);
+
+  const tombol = document.createElement("button");
+  tombol.className = "favorit";
+  tombol.dataset.id = proyek.id;
+  tombol.textContent = favorit.includes(proyek.id) ? "★" : "☆";
+  li.append(tombol);
+
   return li;
 }
 
-export function render(daftar) {
+export function tandaiTombolAktif(kategoriAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol.dataset.kategori === kategoriAktif);
+  });
+}
+
+// js/dom.js
+export function render(state) {
+  if (!wadah) return;
   wadah.textContent = ""; 
   
-  if (daftar.length === 0) { 
-    pesanKosong.textContent = "Belum ada data";
-    pesanKosong.hidden = false;
+  const tampil = saring(state.daftarProyek, state.kategoriAktif); 
+  
+  tandaiTombolAktif(state.kategoriAktif);
+
+  if (tampil.length === 0) { 
+    if (pesanKosong) {
+      pesanKosong.textContent = "Belum ada data";
+      pesanKosong.hidden = false;
+    }
     return;
   }
   
-  pesanKosong.hidden = true;
+  if (pesanKosong) pesanKosong.hidden = true;
 
-  daftar.forEach((proyek) => {
-    const kartu = buatKartu(proyek);
+  tampil.forEach((proyek) => {
+    const kartu = buatKartu(proyek, state.favorit);
     wadah.append(kartu);  
   });
 }
@@ -39,34 +62,11 @@ export function aturMemuat(aktif) {
 }
 
 export function tampilkanGalat(pesan) {
-  wadah.textContent = '';
-  pesanKosong.textContent = pesan;
-  pesanKosong.hidden = false;
-}
-
-function tandaiTombolAktif(tombolAktif) {
-  document.querySelectorAll("#filter button").forEach((tombol) => {
-    tombol.classList.toggle("aktif", tombol === tombolAktif);
-  });
-}
-
-export function pasangFilter(daftar) {
-  if (!barisFilter) return;
-  barisFilter.addEventListener("click", (event) => {
-    const tombol = event.target.closest("button");
-    if (!tombol) return;                 
-  
-    const kategori = tombol.dataset.kategori;
-    const terpilih = daftar.filter((proyek) => {
-      if (kategori === "semua") return true;
-      if (kategori === "Selesai") return proyek.selesai === true;
-      if (kategori === "Proses") return proyek.selesai === false;
-      return false;
-    });
-  
-    tandaiTombolAktif(tombol);
-    render(terpilih);
-  });
+  if (wadah) wadah.textContent = '';
+  if (pesanKosong) {
+    pesanKosong.textContent = pesan;
+    pesanKosong.hidden = false;
+  }
 }
 
 function validasiKolom(input) {

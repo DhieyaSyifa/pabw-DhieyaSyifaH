@@ -1,17 +1,15 @@
 import { ambilProyek } from './api.js';
-import { isiProyek, pulihkan, /*muat*/ } from './state.js';
-import { render, pasangFilter, tampilkanGalat, aturMemuat } from './dom.js';
+import { isiProyek, pulihkan} from './state.js';
+import { tampilkanGalat, aturMemuat } from './dom.js';
 import { pasangPendengar } from './events.js';
 
 async function mulai() {
-  pulihkan(muat());                 // lembar D: pilihan terakhir, atau nilai bawaan
-  pasangPendengar();                
+  pasangPendengar();
 
   aturMemuat(true);                        
   try {
-    const daftar = await ambilProyek();    
-    pasangFilter(daftar);                  
-    render(daftar);                       
+    const daftar = await ambilProyek();
+    isiProyek(daftar);        
   } catch (galat) {
     tampilkanGalat('Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.');
     console.error(galat.message);          
@@ -21,8 +19,6 @@ async function mulai() {
 }
 
 mulai();
-
-
 
 // const profil = {
 //     namaLengkap : "Dhieya Syifa Hardiana",
