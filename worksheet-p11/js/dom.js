@@ -12,10 +12,7 @@ const inputDurasi = document.querySelector("#Durasi");
 export function buatKartu(proyek, favorit = []) {
   const li = document.createElement("li");
   li.className = "kartu";
-  
-  const judul = document.createElement("h3");
-  judul.textContent = proyek.judul || proyek.nama;
-  li.append(judul);
+  li.textContent = `${proyek.judul} (${proyek.tahun})`;
 
   const tombol = document.createElement("button");
   tombol.className = "favorit";

@@ -1,10 +1,49 @@
 import { render } from './dom.js';
 
+const KUNCI = "pabw-p11";
+const VERSI = 2;
+
 export const state = {
     daftarProyek: [],
     kategoriAktif: "semua",
     favorit: []
 };
+
+export function simpan(state) {
+    const isi = {
+        versi: VERSI,
+        kategoriAktif: state.kategoriAktif,
+        favorit: state.favorit
+    };
+    localStorage.setItem(KUNCI, JSON.stringify(isi));
+}
+
+export function muat() {
+    try {
+        const isi = JSON.parse(localStorage.getItem(KUNCI));
+        if (isi?.versi !== VERSI) {
+            localStorage.removeItem(KUNCI);
+            return null;
+        }
+        return isi;
+    } catch {
+        localStorage.removeItem(KUNCI);
+        return null;
+    }
+}
+
+export function pulihkan(isi) {
+    if (!isi) return;
+    state.kategoriAktif = isi.kategoriAktif || "semua";
+    state.favorit = isi.favorit || [];
+}
+
+export function aturUlang() {
+    localStorage.removeItem(KUNCI);
+    state.kategoriAktif = "semua";
+    state.favorit = [];
+    render(state);
+}
 
 export function isiProyek(daftar) {
     state.daftarProyek = daftar;
@@ -13,20 +52,16 @@ export function isiProyek(daftar) {
 
 export function pilihKategori(nilai) {
     state.kategoriAktif = nilai;
+    simpan(state);
     render(state);
 }
 
 export function tambahFavorit(id) {
     if (state.favorit.includes(id)) {
-        // Hapus jika sudah favorit (toggle)
         state.favorit = state.favorit.filter((item) => item !== id);
     } else {
-        // Buat salinan baru (immutability)
         state.favorit = [...state.favorit, id];
     }
+    simpan(state);
     render(state);
-}
-
-export function pulihkan() {
-    // Dipakai nanti untuk Lembar D
 }

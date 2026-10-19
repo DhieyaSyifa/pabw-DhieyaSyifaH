@@ -1,9 +1,10 @@
 import { ambilProyek } from './api.js';
-import { isiProyek, pulihkan} from './state.js';
+import { isiProyek, pulihkan, muat} from './state.js';
 import { tampilkanGalat, aturMemuat } from './dom.js';
 import { pasangPendengar } from './events.js';
 
 async function mulai() {
+  pulihkan(muat());
   pasangPendengar();
 
   aturMemuat(true);                        
