@@ -2,6 +2,14 @@
 
 Repo ini merupakan kumpulan tugas mata kuliah Pengembangan Aplikasi Berbasis Web (PABW)
 
+## Tugas Pertemuan 12 - Dari Berkas Lepas ke Proyek Komponen yang Dibangun
+# Versi node : v24.22.1
+# Versi npm : 11.19.1
+## Catatan Penggunaan AI : 
+- Memahami materi pada worksheet dan petunjuk pengerjaan worksheet pada bagian-bagian tertentu
+- Pemetaan dan penyesuaian kode ke file vue yang dari html
+- Cara memeriksa hal-hal yang diminta di worksheet pada bagian D dan F 
+
 ## Tugas Pertemuan 11 - Membagi Satu Berkas Menjadi Lima Berkas yang Jelas Tugasnya
 ## Catatan Penggunaan AI : 
 - Memahami materi yang ada di worksheet
