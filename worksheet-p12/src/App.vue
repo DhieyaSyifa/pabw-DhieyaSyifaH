@@ -10,18 +10,19 @@ import DaftarProyek from './components/DaftarProyek.vue'
 import FormKontak from './components/FormKontak.vue'
 
 onMounted(async () => {
-  pulihkan(muat())
+  pulihkan(muat()) // Memuat pilihan terakhir dari localStorage
   try {
     state.memuat = true
     const data = await ambilProyek()
     isiProyek(data)
   } catch (galat) {
-    state.galat = 'Gagal memuat data.'
+    state.galat = 'Data gagal dimuat. Periksa koneksi, lalu muat ulang.'
   } finally {
     state.memuat = false
   }
 })
 
+// Otomatis simpan ke localStorage setiap ada perubahan pada state
 watch(state, (nilai) => simpan(nilai), { deep: true })
 </script>
 
