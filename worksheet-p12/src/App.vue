@@ -1,7 +1,138 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <HelloWorld />
+  <div class="page">
+          <header>
+          <input type="checkbox" id="tema" class="pengalih-tema">
+          <label for="tema" class="tombol-tema">Tema gelap</label>
+          <div class="header-baris">
+          <h1>Jadwal dan Target Olahraga</h1>
+               <nav class="navbar" aria-label="Navigasi Utama">
+               <ul>
+                    <li><a href="#bagian-1">Jadwal Olahraga</a></li>
+                    <li><a href="#bagian-2">Jenis Olahraga</a></li>
+                    <li><a href="#bagian-3">Gambar</a></li>
+               </ul>
+               </nav>
+          </div>
+          </header>
+
+     <main>
+          <div class="isi content">
+               <div class="sisi">
+                    <section id="bagian-1">
+                    <h2>Jadwal Olahraga</h2>
+                    <div class="table-wrap">
+                         <table>
+                              <caption>My exercise</caption>
+                              <thead>
+                                   <tr>
+                                        <th scope="col">Hari</th>
+                                        <th scope="col">Jenis olahraga</th>
+                                        <th scope="col">Durasi</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                        <th scope="row">selasa</th>
+                                        <td>Lari</td>
+                                        <td>30 menit</td>
+                                   </tr>
+                                   <tr>
+                                        <th scope="row">Rabu</th>
+                                        <td>Push up</td>
+                                        <td>2 menit</td>
+                                   </tr>
+                                   <tr>
+                                        <th scope="row">Kamis</th>
+                                        <td>Wallsit</td>
+                                        <td>10 menit</td>
+                                   </tr>
+                              </tbody>
+                         </table>
+                    </div>
+                    </section>
+
+                    <section id="bagian-2">
+                    <h2>Jenis Olahraga</h2>
+                    <form action="/simpan" method="post">
+                         <div class="form-kolom">
+                              <label for="Hari">Hari</label>
+                              <input type="text" name="Hari" id="Hari" required>
+                              <span class="pesan-galat">wajib isi</span>
+                         </div>
+                         <div class="form-kolom">
+                              <label for="Jenis">Jenis</label>
+                              <input type="text" name="Jenis" id="Jenis" required>
+                              <span class="pesan-galat">wajib isi</span>
+                         </div>
+                         <div class="form-kolom">
+                              <label for="Durasi">Durasi</label>
+                              <input type="text" name="Durasi" id="Durasi" required>
+                              <span class="pesan-galat">wajib isi</span>
+                         </div>
+                         <button type="submit">Simpan</button>
+                    </form>  
+                    </section>
+               </div>
+               
+               <div class="utama">
+                    <section id="bagian-3">
+                    <h2>Gambar</h2>
+                    <div id="filter">
+                         <button type="button" data-kategori="semua" class="aktif">Semua</button>
+                         <button type="button" data-kategori="Selesai">Selesai</button>
+                         <button type="button" data-kategori="Proses">Proses</button>
+                         <button type="button" data-kategori="Lainnya">Lainnya</button>
+                    </div>
+                    <button type="button" id="atur-ulang">Atur ulang</button>
+                    <div class="galeri grid">
+                         <figure class="kartu">
+                              <img src="../public/voli.jpg"
+                              alt="macam-macam olahraga"
+                              width="360" height="360" loading="lazy">
+                              <figcaption class="kartu__isi">
+                                   <h3 class="kartu__judul">VOLI</h3>
+                                   <p>Bola voli adalah olahraga yang dimainkan oleh dua tim dalam satu lapangan yang dipisahkan oleh sebuah net. Seperti dilansir dari pbvsi.or.id, permainan bola voli diciptakan oleh William G Morgan dan sampai saat ini menjadi salah satu cabang olahraga yang dimainkan masyarakat Indonesia.</p>
+                              </figcaption>
+                         </figure>
+
+                         <figure class="kartu">
+                              <img src="../public/badminton.jpg"
+                              alt="badminton"
+                              width="360" height="360" loading="lazy">
+                              <figcaption class="kartu__isi">
+                                   <h3 class="kartu__judul">BULU TANGKIS</h3>
+                                   <p>Servis bulu tangkis adalah pukulan pembuka yang memulai setiap rally dalam permainan. Tujuan utama servis adalah mengirimkan shuttlecock (kok) ke area lapangan lawan secara legal, sehingga memulai permainan dengan baik.</p>
+                              </figcaption>
+                              
+                         </figure>
+
+                         <figure class="kartu">
+                              <img src="../public/basket.jpeg"
+                              alt="badminton"
+                              width="360" height="360" loading="lazy">
+                              <figcaption class="kartu__isi">
+                                   <h3 class="kartu__judul">BULU TANGKIS</h3>
+                                   <p>Basket menjadi salah satu cabang olahraga yang sangat diminati oleh masyarakat di seluruh dunia. Bisa dilihat, setiap pertandingan di olahraga basket akan ramai oleh penonton. Selain memiliki banyak penggemar, banyak juga atlet dunia yang lahir dari basket.</p>
+                              </figcaption>
+                              
+                         </figure>
+                    </div>
+                    <p id="pesan-kosong" hidden>Tidak ada hasil</p>
+                    <p id="muat" hidden>Memuat data...</p>
+                    </section>
+               </div>
+          
+
+               
+           </div>
+     </main>
+
+     <footer>
+          <p>Dhieya Syifa Hardiana · 25253150 · 2026</p>
+     </footer>
+     </div>
 </template>
